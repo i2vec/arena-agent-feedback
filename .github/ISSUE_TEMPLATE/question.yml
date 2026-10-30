@@ -1,0 +1,21 @@
+name: 使用咨询
+description: 咨询公开文档、接入和反馈流程
+title: "[咨询] "
+labels: ["type:question", "status:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "所有内容公开。不要提供凭据、私有源码、隐藏题面或签名链接；请先搜索已有讨论。"
+  - type: textarea
+    id: context
+    attributes:
+      label: 使用场景和相关版本
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: 具体问题
+      description: 附相关公开文档链接，说明已经尝试或仍不清楚的部分。
+    validations:
+      required: true

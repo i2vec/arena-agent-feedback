@@ -1,0 +1,60 @@
+name: 问题报告
+description: 反馈平台、评测、模型连接、Harbor 或公开题包的异常
+title: "[问题] "
+labels: ["type:bug", "status:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "请先搜索已有 issue。同一次故障影响多题时合并反馈。所有内容公开，请勿粘贴 Key、Token、私有链接、隐藏题面、私有源码或完整评测日志。"
+  - type: dropdown
+    id: component
+    attributes:
+      label: 涉及范围
+      options:
+        - Harness 评测
+        - Playground 平台
+        - 模型网关
+        - Harbor 接入
+        - 公开题包或文档
+        - 其他或暂不确定
+    validations:
+      required: true
+  - type: input
+    id: time
+    attributes:
+      label: 发生时间与时区
+      placeholder: "例如 2026-10-30 19:10 UTC+8；未知请注明"
+    validations:
+      required: true
+  - type: textarea
+    id: identifiers
+    attributes:
+      label: 关联 ID 和版本
+      description: "提供 challenge_id、attempt_id / eval_id、Harbor / CLI / 题包版本、模型名等；不适用或未知请注明，不要贴签名链接。"
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: 实际行为与影响
+      description: 描述真实观察到的症状和影响范围。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 最小复现步骤
+      description: "填写真实执行的步骤；无法复现请注明。命令中不要包含凭据。"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 脱敏错误片段和已做的排查
+      description: 只贴必要且可公开的片段，不上传完整评测归档。

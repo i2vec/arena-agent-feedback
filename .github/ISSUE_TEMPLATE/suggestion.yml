@@ -1,0 +1,20 @@
+name: 改进建议
+description: 建议改善 Agent 接入、平台体验或文档
+title: "[建议] "
+labels: ["type:enhancement", "status:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: "请仅提交可公开的建议，不包含私有题面、源码或凭据。"
+  - type: textarea
+    id: problem
+    attributes:
+      label: 希望解决什么问题
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 建议的行为或方案
+    validations:
+      required: true
